@@ -1,3 +1,61 @@
+/*
+Assignment 3: define css to make the site look like 
+mock-320px.png
+mock-1100px.png
+
+Style the following elements as flexbox containers:
+nav ul
+.item-container
+
+Implement a responsive grid system of your own design, or use a library, or don't use a grid at all. 
+Be sure all important size values are proportional - use rem or % not px.
+
+
+TODO: 
+Copy Admin/Desktop/html100 from Lenovo onto Mac.
+*/
+
+/*
+styles for Basic Grid from html100 Module 8 https://canvas.uw.edu/courses/1166625/pages/lesson-08-overview?module_item_id=7674251
+week8-working-files.zip - /Users/michaelhoffman/Desktop/html100/week-8-working-files/basic-grid/basic-grid.html
+*/
+    * {
+      margin: 0 auto;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Every row is 90% as wide as it's parent, the <body> */
+    div.row {
+      width: 90%;
+      margin: auto;
+    }
+
+    /* clearfix styles to keep the row divs from collapsing,
+      since all their children are floated */
+    div.row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* this selector selects all divs that have a class name
+      beginning with 'col_' 
+
+      ^= means It is the regular expression syntax, another way of saying "starts with this string"       */
+    div[class^='col_']  {
+      float: left;
+      background-color: #99FFCC;
+      border: 1px solid white;
+    }
+
+    div.col_1_of_3 {width: 33.3333%;}
+    div.col_1_of_2 {width: 50%;}
+    div.col_1_of_4 {width: 25%;}
+    div.col_3_of_4 {width: 75%;}
+/* end of styles for Basic Grid */
+
+
 body {
   font-size: 100%;
   font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
@@ -16,14 +74,70 @@ img {
 
 /***************** NAV *****************/
 
+/* for nav bar formatting see my https://mikeshhoffman.github.io/mockup-practice/styles/stylesheet.css */
+
+nav {
+  color: white;
+  background-color: #4B7FC9;
+  margin-bottom: 1rem;
+  width: 95%;
+  height: 3rem;
+/*   align-content: center; */
+  padding-top: 0.9rem;
+  /* padding-bottom: 2rem; */
+}
+
+nav ul.box {
+  display: flex;
+  justify-content: space-around;
+}      
+
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+nav a {
+  /* font: */
+  color: white;
+  background-color: #4B7FC9;
+  font-size: 1.2rem;
+  font-family: 'Didact%22Gothic', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  /* positioning: */
+  float: left;
+}
+
 nav a:hover {
   text-decoration: underline;
+}
+
+nav i {
+  clear: both;
+  float: right;
+  color: white;
+  background-color: #4B7FC9;
+  /*  font-size: 2rem;*/
+  /*  padding-top: 1.2rem;*/
+  /*  padding-bottom: 1rem;*/
 }
 
 /**************** HERO *****************/
 
 header img {
-  max-height: 6rem;
+  max-height: 9rem;
+  float: left;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+h1 {
+  font-family: 'Anton', sans-serif;
+/*  font-weight: bold;*/
+  color: #4B7FC9;
+  font-size: 2.5rem;
 }
 
 h1 .logo-w {
@@ -31,6 +145,10 @@ h1 .logo-w {
 }
 
 /**************** ASIDE ****************/
+
+aside form {
+  clear: both;
+}
 
 input[type="submit"] {
   padding: .25rem;
