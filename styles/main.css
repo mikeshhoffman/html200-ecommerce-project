@@ -41,7 +41,6 @@ p {
   color: #2d2d2d;
 }
 
-/* TODO: size images manually so this is not necessary */
 img {
   display: block;
   margin: auto;
@@ -60,7 +59,6 @@ nav {
 }
 
 nav ul {
-/*  float: left;*/
   display: flex;
   justify-content: space-around;
 }
