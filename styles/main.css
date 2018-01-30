@@ -1,64 +1,38 @@
 /*
-Assignment 3: define css to make the site look like 
-mock-320px.png
-mock-1100px.png
+Assignment 3: define css to make the site look like: 
+mock-320px.png   STATUS: media query to format the nav bar not done, for Assignment 3, b/c not covered yet.
+mock-1100px.png  STATUS: done, for Assignment 3, except: 
+  o  Shopping cart needs to be right-justified.
+  o  Form column needs to be wider if want to match mockup.
 
-Style the following elements as flexbox containers:
-nav ul
-.item-container
+Style the following elements as flexbox containers (waived for Assignment 3 b/c not covered yet):
+nav ul           STATUS: done, for Assignment 3.
+.item-container  STATUS: done, for Assignment 3.
 
-Implement a responsive grid system of your own design, or use a library, or don't use a grid at all. 
+Implement a responsive grid system of your own design, or use a library, or don't use a grid at all.
+                 STATUS: no grid used, for Assignment 3.
+
 Be sure all important size values are proportional - use rem or % not px.
-
-
-TODO: 
-Copy Admin/Desktop/html100 from Lenovo onto Mac.
 */
 
-/*
-styles for Basic Grid from html100 Module 8 https://canvas.uw.edu/courses/1166625/pages/lesson-08-overview?module_item_id=7674251
-week8-working-files.zip - /Users/michaelhoffman/Desktop/html100/week-8-working-files/basic-grid/basic-grid.html
-*/
-    * {
-      margin: 0 auto;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Every row is 90% as wide as it's parent, the <body> */
-    div.row {
-      width: 90%;
-      margin: auto;
-    }
-
-    /* clearfix styles to keep the row divs from collapsing,
-      since all their children are floated */
-    div.row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-    /* this selector selects all divs that have a class name
-      beginning with 'col_' 
-
-      ^= means It is the regular expression syntax, another way of saying "starts with this string"       */
-    div[class^='col_']  {
-      float: left;
-      background-color: #99FFCC;
-      border: 1px solid white;
-    }
-
-    div.col_1_of_3 {width: 33.3333%;}
-    div.col_1_of_2 {width: 50%;}
-    div.col_1_of_4 {width: 25%;}
-    div.col_3_of_4 {width: 75%;}
-/* end of styles for Basic Grid */
-
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-size: 100%;
   font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+    background-color: lightgray;
+  margin: auto;
+}
+
+.container {
+  width: 96%;
+  background-color: white;
+  margin: auto;
+  padding-bottom: 2rem;
 }
 
 p {
@@ -69,44 +43,35 @@ p {
 
 /* TODO: size images manually so this is not necessary */
 img {
-  max-height: 20rem;
+  max-height: 16rem;
+  display: block;
+  margin: auto;
 }
 
 /***************** NAV *****************/
-
-/* for nav bar formatting see my https://mikeshhoffman.github.io/mockup-practice/styles/stylesheet.css */
 
 nav {
   color: white;
   background-color: #4B7FC9;
   margin-bottom: 1rem;
-  width: 95%;
-  height: 3rem;
-/*   align-content: center; */
+  height: 3.3rem;
   padding-top: 0.9rem;
-  /* padding-bottom: 2rem; */
+  border-bottom: 2rem;
+  margin: auto;
 }
 
-nav ul.box {
+nav ul {
   display: flex;
-  justify-content: space-around;
-}      
-
-.item-container {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
 }
 
 nav a {
-  /* font: */
   color: white;
   background-color: #4B7FC9;
   font-size: 1.2rem;
   font-family: 'Didact%22Gothic', sans-serif;
   font-weight: bold;
   text-decoration: none;
-  /* positioning: */
   float: left;
 }
 
@@ -115,29 +80,31 @@ nav a:hover {
 }
 
 nav i {
-  clear: both;
   float: right;
   color: white;
   background-color: #4B7FC9;
-  /*  font-size: 2rem;*/
-  /*  padding-top: 1.2rem;*/
-  /*  padding-bottom: 1rem;*/
 }
 
-/**************** HERO *****************/
+/**************** HEADER *****************/
+
+header {
+  margin: auto;
+}
 
 header img {
   max-height: 9rem;
   float: left;
   padding-left: 1rem;
   padding-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 3.5rem;
 }
 
 h1 {
   font-family: 'Anton', sans-serif;
-/*  font-weight: bold;*/
   color: #4B7FC9;
   font-size: 2.5rem;
+  padding-top: 3.2rem;
 }
 
 h1 .logo-w {
@@ -148,8 +115,12 @@ h1 .logo-w {
 
 aside form {
   clear: both;
+  float: left;
+  padding-left: 1rem;
+  font-weight: bold;
 }
 
+/* Present in provided css file, though not in mockups.
 input[type="submit"] {
   padding: .25rem;
   background-color: #3D7FCF;
@@ -158,6 +129,36 @@ input[type="submit"] {
   font-size: .75rem;
   color: white;
 }
+*/
+
+input[type="button"] {
+  padding: .25rem;
+  background-color: #3D7FCF;
+  border: 1px solid #3D7FCF;
+  border-radius: 5px;
+  font-size: .75rem;
+  color: white;
+  width: 100%;
+}
+
+form {
+  margin-top: 2.5rem;
+}
+
+form label {
+  font-size: 1.3rem;
+}
+
+form label select {
+  margin-top: 0.5rem;
+  width: 100%;
+  border-color: #4B7FC9;
+  color: #4B7FC9;
+}
+
+form input {
+  margin-top: 0.5rem;
+}
 
 /*********** PRODUCTS SECTION ***********/
 
@@ -165,15 +166,42 @@ section {
   padding: 0 .75rem;
 }
 
+/* eg Scarves */
 h2 {
   padding-top: 1.5rem;
   font-size: 2rem;
   text-align: center;
   color: #2d2d2d;
+  font-weight: bold;
 }
 
+/* a particular product */
 h3 {
   font-size: 1.2rem;
   text-align: center;
   color: #2d2d2d;
+  padding-bottom: 1rem;
+  font-weight: bold;
+}
+
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.item-container div {
+  max-width: 18rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-spacing: 1rem;
+  margin-top: 2rem;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  padding: 1rem;
+}
+
+.item-container div img {
+  padding-bottom: 1rem;
 }
