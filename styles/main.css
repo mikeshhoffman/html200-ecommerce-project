@@ -60,7 +60,12 @@ nav {
   margin: auto;
 }
 
-nav ul {
+div.nav {
+  float: left;
+  width: 90%;
+}
+
+div.nav ul {
   display: flex;
   justify-content: space-around;
 }
@@ -83,12 +88,13 @@ nav a:hover {
   padding-bottom: 1rem;
 }
 
-nav ul.cart {
+/*nav ul.cart {*/
+div.cart {
   float: right;
   display: flex;
   justify-content: center;
   align-content: center;
-  padding-right: 1.5rem;
+  padding-right: 1.7rem;
 }
 
 /**************** HEADER *****************/
