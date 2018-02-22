@@ -13,6 +13,9 @@ Implement a responsive grid system of your own design, or use a library, or don'
                  STATUS: no grid used, for Assignment 3.  gridtest.html contains a grid to possibly use, laid out like this app.
 
 Be sure all important size values are proportional - use rem or % not px.
+
+
+Assignment 6: included css rules for email field and its submit button.
 */
 
 * {
@@ -88,7 +91,6 @@ nav a:hover {
   padding-bottom: 1rem;
 }
 
-/*nav ul.cart {*/
 div.cart {
   float: right;
   display: flex;
@@ -132,7 +134,6 @@ aside form {
   font-weight: bold;
 }
 
-/* Present in provided css file, though not in mockups.
 input[type="submit"] {
   padding: .25rem;
   background-color: #3D7FCF;
@@ -141,7 +142,6 @@ input[type="submit"] {
   font-size: .75rem;
   color: white;
 }
-*/
 
 input[type="button"] {
   padding: .25rem;
@@ -150,7 +150,12 @@ input[type="button"] {
   border-radius: 5px;
   font-size: .75rem;
   color: white;
-  width: 100%;
+  width: 5rem;
+}
+
+input[type="email"] {
+  padding: .25rem;
+  width: 60%;
 }
 
 form {

@@ -1,3 +1,28 @@
+/*
+Assignment 6 for HTML 200, due Feb. 22, 2018
+
+Write a JS form handler function to be triggered on submission of the email signup form. 
+something like "Thanks for signing up for our mailing list, bob@bobross.com!"
+*/
+
+// form handler function to be triggered on submission of the email signup form
+function processEmail() {
+
+  // stop form submit unless Firefox
+  event.preventDefault();
+
+  // traverse the DOM to access the form field 
+  var email = document.getElementById('email');
+
+  // print to the console a friendly message, including the value of the "email" form field
+  console.log("Thanks for signing up for our mailing list, " + email.value + "!")
+}; 
+
+// add the email form handler function to the email Submit button
+const emailBtn = document.getElementById('emailSubmit');
+emailBtn.addEventListener('click', processEmail);
+
+
 // As an extra challenge, you can build the product listings
 // by looping over this array and creating HTML for each element.
 // This will be best accomplished after we do lesson 09.
