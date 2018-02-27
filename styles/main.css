@@ -142,6 +142,7 @@ aside form {
   padding-left: 1rem;
   font-weight: bold;
   max-width: 12rem;
+  margin-bottom: 1.5rem;
 }
 
 input[type="submit"] {
@@ -160,11 +161,8 @@ input[type="button"] {
   border-radius: 5px;
   font-size: .75rem;
   color: white;
-  width: 5rem;
-}
-
-.filter {
-  width: 130;
+  width: 100%;
+  height: 2.0rem;
 }
 
 input[type="email"] {
@@ -183,6 +181,7 @@ form label {
 form label select {
   margin-top: 0.5rem;
   width: 100%;
+  height: 2.0rem;
   border-color: #4B7FC9;
   color: #4B7FC9;
 }
@@ -306,28 +305,34 @@ h3 {
   div.cart {
 /*    background-color:  green;*/
 /*    clear: both;*/
+/*  display: flex;*/
+/*  align-content: center;*/
     display: block;
     justify-content: center;
-/*    float: left;*/
-    padding-left: 0rem;
+/*  float: right;*/
+/*    padding-left: 0rem;*/
     padding-top: 0.7rem;
+  padding-right: 0rem;
     width: 100%;
   }
 
-  div.cart ul {
+div.cart {
+}
+
+div.cart ul {
   }
 
   div.nav ul li {
-/*    display: flex;*/
-/*    justify-content: center;*/
-    padding: 8rem;
+    display: flex;
+    justify-content: center;
+/*    padding: 8rem;*/
 /*    justify-content: center;*/
 /*    text-align: center;*/
     border-style: solid;
     border-width: 0px 0px 1px 0px;
     border-color: white;
     padding-top: 0.6rem;
-    padding-bottom: 2rem;
+    padding-bottom: 0.5rem;
   }
 
   nav a {
