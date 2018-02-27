@@ -1,4 +1,6 @@
 /*
+See README.md for assignments overview.
+
 Assignment 3: define css to make the site look like: 
 mock-320px.png   STATUS: media query to format the nav bar not done, for Assignment 3, b/c not covered yet.
 mock-1100px.png  STATUS: done, for Assignment 3, except: 
@@ -16,6 +18,13 @@ Be sure all important size values are proportional - use rem or % not px.
 
 
 Assignment 6: included css rules for email field and its submit button.
+
+
+Assignment 7: 
+Define media queries to change layouts/style based on device size.
+Define a media query to format the nav bar.
+There shoud be at least one obvious layout change.
+Elements should fluidly change width.
 */
 
 * {
@@ -132,6 +141,7 @@ aside form {
   float: left;
   padding-left: 1rem;
   font-weight: bold;
+  max-width: 12rem;
 }
 
 input[type="submit"] {
@@ -151,6 +161,10 @@ input[type="button"] {
   font-size: .75rem;
   color: white;
   width: 5rem;
+}
+
+.filter {
+  width: 130;
 }
 
 input[type="email"] {
@@ -221,4 +235,122 @@ h3 {
 
 .item-container div img {
   padding-bottom: 1rem;
+}
+
+
+
+@media screen and (max-width: 500px) {
+  
+  body {
+/*    padding: 0; */
+  }
+  
+  .container {
+/*    width: 95%;*/
+  }
+  
+  header {
+    
+  }
+
+  /* logo-scarfcat smaller */
+  header img {
+    max-height: 6.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* h1 smaller, centered */
+  h1 {
+    font-size: 2.0rem;
+    text-align: center;
+    padding-right: 6rem;
+    padding-top: 1.5rem;
+  }
+  
+  h1 .logo-w {
+    font-size: 3.0rem;
+  }
+
+/* narrow nav */
+nav {
+  display: block;
+/*  color: white;*/
+/*  background-color: #4B7FC9;*/
+/*  margin-bottom: 1rem;*/
+  height: 10rem;
+/*  padding-top: 1rem;*/
+/*  border-bottom: 2rem;*/
+/*  margin: auto;*/
+}
+
+div.nav {
+  clear: both;
+/*  float: left;*/
+/*  width: 90%;*/
+}
+
+div.nav ul {
+  display: block;
+/*  justify-content: space-around;*/
+}
+  
+div.nav ul li {
+  padding: 1rem;
+/*  justify-content: center;*/
+  text-align: center;
+  border-style: solid;
+  border-width: 1px 0px 1px 0px;
+  border-color: white;
+  padding-top: 0.6rem;
+  padding-bottom: 2rem;
+}
+
+nav a {
+/*  color: white;*/
+/*  font-size: 1.2rem;*/
+/*  font-family: 'Didact%22Gothic', sans-serif;*/
+/*  font-weight: bold;*/
+/*  text-decoration: none;*/
+/*  float: left;*/
+  clear: both;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.cart-info {
+/*  font-size: 1.3rem;*/
+/*  padding-bottom: 1rem;*/
+}
+
+div.cart {
+  clear: both;
+/*  float: right;*/
+/*  display: flex;*/
+  justify-content: center;
+  align-content: center;
+/*  padding-right: 1.7rem;*/
+}
+
+/* end of narrow nav */
+
+  
+  main {
+    width: 95%;
+  }
+  
+  aside {
+    display: block;
+  }
+
+  aside form {
+    max-width: 100%;
+  }
+
+  main > section {
+    clear: both;
+    display: block;
+  }
+  
 }
