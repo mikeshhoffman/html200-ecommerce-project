@@ -19,8 +19,9 @@ function processEmail() {
 }; 
 
 // add the email form handler function to the email Submit button
-const emailBtn = document.getElementById('emailSubmit');
-emailBtn.addEventListener('click', processEmail);
+// this is an alternative to the onclick attribute: <input type="submit" value="Submit" id="emailSubmit" onclick="processEmail()">
+//const emailBtn = document.getElementById('emailSubmit');
+//emailBtn.addEventListener('click', processEmail);
 
 
 // As an extra challenge, you can build the product listings
