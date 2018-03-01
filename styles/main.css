@@ -107,15 +107,26 @@ h1 .logo-w {
 
 /**************** ASIDE ****************/
 
-aside form {
+form {
   clear: both;
   float: left;
   padding-left: 1rem;
   font-weight: bold;
   max-width: 12rem;
+  margin-top: 2.5rem;
   margin-bottom: 1.5rem;
 }
 
+input {
+  margin-top: 0.5rem;
+}
+
+input[type="email"] {
+  padding: .25rem;
+  width: 100%;
+}
+
+/* email Submit button: */
 input[type="submit"] {
   padding: .25rem;
   background-color: #3D7FCF;
@@ -123,8 +134,10 @@ input[type="submit"] {
   border-radius: 5px;
   font-size: .75rem;
   color: white;
+  width: 100%;
 }
 
+/* Sort button: */
 input[type="button"] {
   padding: .25rem;
   background-color: #3D7FCF;
@@ -135,30 +148,17 @@ input[type="button"] {
   width: 100%;
 }
 
-input[type="email"] {
-  padding: .25rem;
-  width: 60%;
-}
-
-form {
-  margin-top: 2.5rem;
-}
-
-form label {
+label {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.3rem;
 }
 
-form label select {
+select {
   margin-top: 0.5rem;
   height: 1.5rem;
   width: 100%;
   border-color: #4B7FC9;
   color: #4B7FC9;
-}
-
-form input {
-  margin-top: 0.5rem;
 }
 
 /*********** PRODUCTS SECTION ***********/
@@ -219,7 +219,32 @@ h3 {
   
   /* ======== TOP MATTER (NARROW) ======== */
   .container {
+/*    clear: both;*/
     width: 100%;
+    margin: 0;
+    padding: 0;
+/*    justify-content: center;*/
+  }
+
+  main {
+/*
+    display: flex;
+    justify-content: center;
+*/
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  aside {
+    clear: both;
+    display: flex;
+    justify-content: center;
+  }
+
+  form {
+    padding-left: 0;
+    justify-content: center;
+    max-width: 100%;
   }
 
   body {
@@ -234,7 +259,7 @@ h3 {
   h1 {
     font-size: 2.0rem;
     padding-left: 6.5rem;
-    padding-top: 1.5rem;
+    padding-top: 2.1rem;
   }
   
   h1 .logo-w {
@@ -243,12 +268,12 @@ h3 {
 
   /* ======== NAV (NARROW) ======== */
   nav {
-    height: 9rem;
     padding-top: 0rem;
     padding-bottom: 10.5rem;
   }
 
   div.nav {
+/*    clear: both;*/
     width: 100%;
   }
 
@@ -257,8 +282,6 @@ h3 {
   }
 
   div.cart {
-    display: block;
-    justify-content: center;
     padding-top: 0.7rem;
     padding-right: 0rem;
     width: 100%;
@@ -277,44 +300,27 @@ h3 {
   nav a {
     font-size: 1.5rem;
   }
-
-  nav a:hover {
-    text-decoration: underline;
-  }
-
-  .cart-info {
-    font-size: 1.3rem;
-  }
-
-  div.cart {
-    clear: both;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-  }
   
   /* ======== MAJOR SECTIONS (NARROW) ======== */
-  main {
-    width: 100%;
-  }
-  
-  aside {
-    display: block;
-  }
-
-  aside form {
-    max-width: 100%;
-  }
-
   main > section {
-    clear: both;
+/*    clear: both;*/
   }
-                
+
+  input[type="email"] {
+    height: 2.0rem;
+  }
+
+  /* email Submit button: */
+  input[type="submit"] {
+    height: 2.0rem;
+  }
+
+  /* Sort button: */
   input[type="button"] {
     height: 2.0rem;
   }
                 
-  form label select {
+  select {
     height: 2.0rem;
   }
 }
