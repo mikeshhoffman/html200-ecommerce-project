@@ -219,18 +219,12 @@ h3 {
   
   /* ======== TOP MATTER (NARROW) ======== */
   .container {
-/*    clear: both;*/
     width: 100%;
     margin: 0;
     padding: 0;
-/*    justify-content: center;*/
   }
 
   main {
-/*
-    display: flex;
-    justify-content: center;
-*/
     margin: 0 auto;
     padding: 0;
   }
@@ -249,6 +243,7 @@ h3 {
 
   body {
     font-size: 1.2rem;
+    line-height: 1.5rem;
   }
 
   header img {
@@ -273,7 +268,6 @@ h3 {
   }
 
   div.nav {
-/*    clear: both;*/
     width: 100%;
   }
 
@@ -302,10 +296,6 @@ h3 {
   }
   
   /* ======== MAJOR SECTIONS (NARROW) ======== */
-  main > section {
-/*    clear: both;*/
-  }
-
   input[type="email"] {
     height: 2.0rem;
   }
