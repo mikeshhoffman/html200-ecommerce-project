@@ -226,10 +226,9 @@ h3 {
 
   /* ======== NAV (NARROW) ======== */
   nav {
-    margin-bottom: 1rem;
-    height: 15rem;
+    margin-bottom: 0rem;
+    height: 10.1rem;
     padding-top: 0rem;
-    border-bottom: 2rem;
   }
 
   div.nav {
@@ -241,13 +240,13 @@ h3 {
   }
 
   div.cart {
-    padding-top: 1.0rem;
+    padding-top: 0.7rem;
     padding-right: 0rem;
     width: 100%;
   }
 
   li.cart-info {
-    font-size: 1.9rem;
+    font-size: 1.3rem;
   }
 
   div.nav ul li {
@@ -261,7 +260,7 @@ h3 {
   }
 
   nav a {
-    font-size: 2.5rem;
+    font-size: 1.3rem;
   }
   
   main {
@@ -282,19 +281,18 @@ h3 {
   }
 
   p {
-    font-size: 1.3rem;
-    line-height: 1.6rem;
+    font-size: 1.0rem;
   }
 
   header img {
-    max-height: 8rem;
+    max-height: 6rem;
     margin-bottom: 0.5rem;
   }
 
   h1 {
     font-size: 2.0rem;
     padding-left: 6.5rem;
-    padding-top: 3.3rem;
+    padding-top: 1.7rem;
   }
   
   h1 .logo-w {
