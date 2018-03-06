@@ -30,41 +30,60 @@ DONE:
 1. Console log all the product names that are in the cart array when user clicks on shopping cart icon. 
 
 2. Keep track of the total price of all items in cart.  Some possible approaches:
-   o  Pass objects with names and prices to the "cart" array instead of just name strings.
+   o  DONE: Pass objects with names and prices to the "cart" array instead of just name strings.
    o  Have a separate array for prices that also gets updated on click of +/-
 */  
 
 var cart = []
 
 // Click handler function for each product's Buy button.
-// If product isn't in cart, adds product to cart.
-// If product is in cart, removes product from cart.
 function updateCart(product) {
   event.preventDefault()
   
-  var i = cart.indexOf(product)
+  // If product isn't in cart, add product to cart.
+  // If product is in cart, remove product from cart.
+  var i = containsObject(product)
   if (i == -1) {
     cart.push(product)
   } else {
     cart.splice(i, 1)
   }
+  
+  // Show count of items in cart:
+  if (cart.length == 0){
+    console.log("\n0 items in cart")
+  }
+  else if (cart.length == 1) {
+    console.log("\n1 item in cart:")
+  }
+  else {
+    console.log("\n" + cart.length + " items in cart:")
+  }
  
-  console.log(cart.length + ((cart.length == 1) ? " item" : " items") + " in cart:")
+  // Show items in cart:
   cart.forEach(function(element) {
-    console.log(element)
+    console.log(element.price + ": " + element.name)
   })
+  
+  console.log("Total: " + totalCost())
 }
 
-// later, switch to:
-function containsObject(obj, list) {
-    var i;
-    for (i = 0; i < list.length; i++) {
-        if (list[i] === obj) {
-            return true;
+// Check whether cart contains product
+function containsObject(obj) {
+    for (var i = 0; i < cart.length; i++) {
+        if (cart[i].name == obj.name) {
+            return i;
         }
     }
+    return -1;
+}
 
-    return false;
+function totalCost(){
+    var total = 0
+    for (var i = 0; i < cart.length; i++) {
+      var total = total + Number(cart[i].price.substr(1))
+    }
+    return total;
 }
 
 // form handler function to be triggered on submission of the email signup form
@@ -79,11 +98,6 @@ function processEmail() {
   // print to the console a friendly message, including the value of the "email" form field
   console.log("Thanks for signing up for our mailing list, " + email.value + "!")
 }; 
-
-// add the email form handler function to the email Submit button
-// this is an alternative to the onclick attribute: <input type="submit" value="Submit" id="emailSubmit" onclick="processEmail()">
-//const emailBtn = document.getElementById('emailSubmit');
-//emailBtn.addEventListener('click', processEmail);
 
 
 // As an extra challenge, you can build the product listings
@@ -139,4 +153,3 @@ var products = [
     "imageTitle": "twill.jpg"
   }
 ]
-
