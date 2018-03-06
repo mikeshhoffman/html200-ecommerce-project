@@ -3,16 +3,78 @@ Assignment 6 for HTML 200, due Feb. 22, 2018
 
 Write a JS form handler function to be triggered on submission of the email signup form. 
 something like "Thanks for signing up for our mailing list, bob@bobross.com!"
-*/
+
+
+Assignment 8 for HTML 200, due March 8, 2018
+
+Write JS function to add/remove items from cart:
+
+DONE:
+1.	Add a +/- button to each product listing in the HTML 
+TODO:
+(maybe use Font Awesome to make it look good?)
+
+DONE:
+2.	Define a global variable in JS, array “cart”.
+
+DONE:
+3.	Write onclick handler in JS that accepts a product name as argument, pushes name into “cart” array if it is not yet there, removes it if it is, console logs the size of the cart.
+
+DONE:
+4.	Each +/- button should trigger the handler, passing in the appropriate product name.
+
+If you prefer to have separate "add to cart" and "remove from cart" buttons for each product, that's fine, just make sure the click handlers work as expected. 
+
+Extra challenges:
+DONE:
+1. Console log all the product names that are in the cart array when user clicks on shopping cart icon. 
+
+2. Keep track of the total price of all items in cart.  Some possible approaches:
+   o  Pass objects with names and prices to the "cart" array instead of just name strings.
+   o  Have a separate array for prices that also gets updated on click of +/-
+*/  
+
+var cart = []
+
+// Click handler function for each product's Buy button.
+// If product isn't in cart, adds product to cart.
+// If product is in cart, removes product from cart.
+function updateCart(product) {
+  event.preventDefault()
+  
+  var i = cart.indexOf(product)
+  if (i == -1) {
+    cart.push(product)
+  } else {
+    cart.splice(i, 1)
+  }
+ 
+  console.log(cart.length + ((cart.length == 1) ? " item" : " items") + " in cart:")
+  cart.forEach(function(element) {
+    console.log(element)
+  })
+}
+
+// later, switch to:
+function containsObject(obj, list) {
+    var i;
+    for (i = 0; i < list.length; i++) {
+        if (list[i] === obj) {
+            return true;
+        }
+    }
+
+    return false;
+}
 
 // form handler function to be triggered on submission of the email signup form
 function processEmail() {
 
   // stop form submit unless Firefox
-  event.preventDefault();
+  event.preventDefault()
 
   // traverse the DOM to access the form field 
-  var email = document.getElementById('email');
+  var email = document.getElementById('email')
 
   // print to the console a friendly message, including the value of the "email" form field
   console.log("Thanks for signing up for our mailing list, " + email.value + "!")

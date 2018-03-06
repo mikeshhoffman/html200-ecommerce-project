@@ -1,3 +1,6 @@
+/*
+*/
+
 * {
   margin: 0 auto;
   padding: 0;
@@ -209,6 +212,18 @@ h3 {
   padding-bottom: 1rem;
 }
 
+.item-container div button {
+  padding-top: 0.1rem;
+  padding-right: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.2rem;
+  margin-top: 1.0rem;
+  text-align: center;
+  font-size: 1.3rem;
+  border: 1px solid #3D7FCF;
+  border-radius: 5px;
+  
+}
 
 
 /* ================================================== */
