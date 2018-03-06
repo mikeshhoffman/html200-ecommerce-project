@@ -50,14 +50,15 @@ function updateCart(product) {
   }
   
   // Show count of items in cart:
+  console.log("")
   if (cart.length == 0){
-    console.log("\n0 items in cart")
+    console.log("0 items in cart")
   }
   else if (cart.length == 1) {
-    console.log("\n1 item in cart:")
+    console.log("1 item in cart:")
   }
   else {
-    console.log("\n" + cart.length + " items in cart:")
+    console.log(cart.length + " items in cart:")
   }
  
   // Show items in cart:
@@ -65,24 +66,27 @@ function updateCart(product) {
     console.log(element.price + ": " + element.name)
   })
   
-  console.log("Total: " + totalCost())
+  console.log("------------------------")
+  console.log("$" + totalCost() + " total")
 }
 
 // Check whether cart contains product
 function containsObject(obj) {
-    for (var i = 0; i < cart.length; i++) {
-        if (cart[i].name == obj.name) {
-            return i;
-        }
+  for (var i = 0; i < cart.length; i++) {
+    if (cart[i].name == obj.name) {
+      return i;
     }
-    return -1;
+  }
+  return -1;
 }
 
 function totalCost(){
     var total = 0
     for (var i = 0; i < cart.length; i++) {
-      var total = total + Number(cart[i].price.substr(1))
+      total = total + Number(cart[i].price.substr(1))
     }
+    // round and truncate cents
+    total = (Math.round(total * 100) / 100).toFixed(2)
     return total;
 }
 
