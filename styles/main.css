@@ -84,6 +84,31 @@ li.cart-info {
   padding-bottom: 1rem;
 }
 
+#cartQty {
+  font-size: 1.0rem;
+  padding-left: 0.3rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#cartInfo {
+  clear: both;
+  text-align: left;
+  margin-top: 1.0rem;
+  margin-right: 2.0rem;
+  margin-bottom: 1.0rem;
+  margin-left: 2.0rem;
+}
+
+#cartInfo h3 {
+  clear: both;
+  text-align: left;
+}
+
+#cartInfo td {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
 /**************** HEADER *****************/
 
 header {

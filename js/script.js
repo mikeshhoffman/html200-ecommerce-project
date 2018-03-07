@@ -48,7 +48,9 @@ function updateCart(product) {
   } else {
     cart.splice(i, 1)
   }
+
   
+  // CONSOLE OUTPUT
   // Show count of items in cart:
   console.log("")
   if (cart.length == 0){
@@ -68,6 +70,74 @@ function updateCart(product) {
   
   console.log("------------------------")
   console.log("$" + totalCost() + " total")
+
+  // show cart count next to cart icon
+  document.getElementById("cartQty").textContent = cart.length
+  
+
+  // WEB PAGE OUTPUT
+  // show cart contents in web page
+  var cartContent = document.getElementById("cartInfo")  
+  cartContent.innerHTML = ''
+  // Add heading
+  
+  var el = cartContent.appendChild(document.createElement('h3'))
+  // el.nodeValue = "JS Shopping cart"
+  el.textContent = "Shopping cart"
+
+  cartContent.appendChild(el)
+  
+  // Add <p> node showing count
+  el = cartContent.appendChild(document.createElement('p'))
+  if (cart.length == 0){
+    el.textContent = ' 0 items in cart'
+  }
+  else if (cart.length == 1) {
+    el.textContent = cart.length + ' item in cart'
+  }
+  else {
+    el.textContent = cart.length + ' items in cart'
+  }
+
+  // start table
+  el = cartContent.appendChild(document.createElement('table'))
+          
+  // add table row for each item in cart
+  cart.forEach(function(element) {
+    el = cartContent.appendChild(document.createElement('tr'))
+    el = cartContent.appendChild(document.createElement('td'))
+    el.innerHTML = element.price
+    el = cartContent.appendChild(document.createElement('td'))
+    el.innerHTML = element.name
+  })
+
+  // add separator line row before total
+  el = cartContent.appendChild(document.createElement('tr'))
+  el = cartContent.appendChild(document.createElement('td'))
+  el.innerHTML = '---------------'
+  el = cartContent.appendChild(document.createElement('td'))
+  el.innerHTML = '---------------------'
+  
+  // add row showing total cost
+  el = cartContent.appendChild(document.createElement('tr'))
+  el = cartContent.appendChild(document.createElement('td'))
+  el.innerHTML = '$' + totalCost()
+  el = cartContent.appendChild(document.createElement('td'))
+  el.innerHTML = 'Total'
+}
+
+
+var isCartVisible = true
+
+function showHideCart() {
+  var div = document.getElementById("cartInfo")
+  if (isCartVisible){
+    div.style.display = 'none'
+    isCartVisible = false 
+  } else {
+    div.style.display = 'block'
+    isCartVisible = true
+  }  
 }
 
 // Check whether cart contains product

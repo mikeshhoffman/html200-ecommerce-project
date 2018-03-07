@@ -29,12 +29,14 @@
         <div class="cart">
           <ul>
             <li class="cart-info">
-              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              <i class="fa fa-shopping-cart" aria-hidden="true" id="cartIcon" onclick="showHideCart()">
+                <span id="cartQty"></span>
+              </i>
             </li>
           </ul>
         </div>
       </nav>
-
+      
       <!-- orig: 640w -->
       <img srcset="images/logo-scarfcat-160w.png 400w, 
                    images/logo-scarfcat-200w.png 800w, 
@@ -49,6 +51,32 @@
         <span class="logo-w">W</span>ear<br>
         <span class="logo-w">W</span>arehouse
       </h1>
+      
+      <div id="cartInfo">
+        <!-- hardcoded dummy content for css tuning:
+        <h3>Shopping cart</h3>
+        <p>2 items in cart</p>
+        <table>
+          <tr>
+            <td>$26.99</td>
+            <td>Reversible Plaid</td>
+          </tr>
+          <tr>
+            <td>$18.99</td>
+            <td>Fringed Plaid</td>
+          </tr>
+          <tr>
+            <td>---------------</td>
+            <td>---------------------</td>
+          </tr>
+          <tr>
+            <td>$45.98</td>
+            <td>Total</td>
+          </tr>
+        </table>
+        -->
+      </div>
+
     </header>
 
     <main>
@@ -88,7 +116,7 @@
                            (max-width: 1600px) 800px, 
                            (min-width: 1601px) 1200px"
                     src="images/reversible-plaid.jpg"
-                    alt="fringed plaid scarf">
+                    alt="reversible plaid scarf">
               <p>Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.</p>
               <p>$26.99</p>
               <p class="buy"></p>
