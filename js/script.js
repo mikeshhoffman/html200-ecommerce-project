@@ -73,26 +73,23 @@ function updateCart(product) {
 
   // show cart count next to cart icon
   document.getElementById("cartQty").textContent = cart.length
-  
 
-  // WEB PAGE OUTPUT
-  // show cart contents in web page
+  composeCart()
+}
+
+// compose cart contents
+function composeCart() {
   var cartContent = document.getElementById("cartInfo")  
   cartContent.innerHTML = ''
-  // Add heading
-  
-  var el = cartContent.appendChild(document.createElement('h3'))
-  // el.nodeValue = "JS Shopping cart"
-  el.textContent = "Shopping cart"
 
+  // Add heading
+  var el = cartContent.appendChild(document.createElement('h3'))
+  el.textContent = "Shopping cart"
   cartContent.appendChild(el)
   
   // Add <p> node showing count
   el = cartContent.appendChild(document.createElement('p'))
-  if (cart.length == 0){
-    el.textContent = ' 0 items in cart'
-  }
-  else if (cart.length == 1) {
+  if (cart.length == 1) {
     el.textContent = cart.length + ' item in cart'
   }
   else {
@@ -105,25 +102,19 @@ function updateCart(product) {
   // add table row for each item in cart
   cart.forEach(function(element) {
     el = cartContent.appendChild(document.createElement('tr'))
-    el = cartContent.appendChild(document.createElement('td'))
-    el.innerHTML = element.price
-    el = cartContent.appendChild(document.createElement('td'))
-    el.innerHTML = element.name
+    el.innerHTML = '<td>' + element.price + '</td>' +
+                   '<td>' + element.name + '</td>'
   })
 
   // add separator line row before total
   el = cartContent.appendChild(document.createElement('tr'))
-  el = cartContent.appendChild(document.createElement('td'))
-  el.innerHTML = '---------------'
-  el = cartContent.appendChild(document.createElement('td'))
-  el.innerHTML = '---------------------'
+  el.innerHTML = '<td>---------------</td>' +
+                 '<td>---------------------</td>'
   
   // add row showing total cost
   el = cartContent.appendChild(document.createElement('tr'))
-  el = cartContent.appendChild(document.createElement('td'))
-  el.innerHTML = '$' + totalCost()
-  el = cartContent.appendChild(document.createElement('td'))
-  el.innerHTML = 'Total'
+  el.innerHTML = '<td>' + '$' + totalCost() + '</td>' +
+                 '<td>Total</td>'
 }
 
 
