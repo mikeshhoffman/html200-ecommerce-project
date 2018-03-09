@@ -49,8 +49,12 @@ function updateCart(product) {
     cart.splice(i, 1)
   }
 
-  
-  // CONSOLE OUTPUT
+  composeCartConsole()
+  composeCart()
+}
+
+// compose cart contents for console
+function composeCartConsole() {
   // Show count of items in cart:
   console.log("")
   if (cart.length == 0){
@@ -73,11 +77,9 @@ function updateCart(product) {
 
   // show cart count next to cart icon
   document.getElementById("cartQty").textContent = cart.length
-
-  composeCart()
 }
-
-// compose cart contents
+  
+// compose cart contents for webpage
 function composeCart() {
   var cartContent = document.getElementById("cartInfo")  
   cartContent.innerHTML = ''
@@ -117,8 +119,9 @@ function composeCart() {
                  '<td>Total</td>'
 }
 
-
-var isCartVisible = true
+// show/hide cart, initially hidden/empty
+var isCartVisible = false
+document.getElementById("cartInfo").style.display = 'none'
 
 function showHideCart() {
   var div = document.getElementById("cartInfo")
