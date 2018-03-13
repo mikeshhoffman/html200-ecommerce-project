@@ -68,5 +68,74 @@ Lesson 09:
 ## Grading
 Each weekly assignment will be graded independently. There will not be a final grade for the entire project.
 
-## Testing
-[update this section with information about the testing steps you took to ensure site quality]
+
+## User research
+
+Whos the site's current audience? 
+
+What is the site's desired audience? 
+
+Expected or intended audience for Winter Wear Warehouse website:
+o  Daily commuter bicyclists
+o  Women
+o  Skiers
+
+What kinds of devices do the audience use?
+The devices and OSs that the website audience is likely to use:
+o  iPhone 6 Plus, iOS, on medium-fast cell tower networks
+o  Chrome on MacBook Pro on WiFi
+
+The above research was guided by:
+http://www.websitecriteria.com/website_writing_guide_before_you_begin_to_write/identify_the_intended_audience.html
+
+The above research is used below to prioritize the kinds of devices and contexts that were tested.
+
+
+## Site testing
+
+The site's responsivity and performance was tested against the above targeted devices, to ensure site quality.
+
+The site address: 
+https://mikeshhoffman.github.io/html200-ecommerce-project/
+
+The site was tested across multiple browsers and devices, focusing on the browsers and devices which our market research highlighted.
+
+### Tools used for testing
+
+
+### Tools not yet used for testing
+
+Recommended at least:
+  o https://www.webpagetest.org/ -- USED
+  Tested in Seattle via  Dulles, VA - Chrome - Cable.
+  around 1.15 sec. to first view
+  
+  
+  o http://responsivedesignchecker.com/ -- USED
+
+Emulators & Virtual Machines (difference?) 
+  o Microsoft Edge Emulator
+  o Virtual Box, for running Windows on Mac 
+  o Windows Phone emulator in Edge 
+  o Google Developers article with more
+
+Browser Tools
+  o http://responsivedesignchecker.com/ 
+  o Chrome Extensions
+  o Browser Dev Tools
+
+Real Devices
+  o Open Device Lab in Fremont, at Formidable Labs
+  o iPad at home, 2 orientations, split screen
+  o iPhone 6 Plus, 2 orientations
+  o MacBook Pro, various widths, Chrome, Firefox
+  o Not done: Open Device Lab in Fremont, at Formidable Labs
+
+Paid options:
+  o https://www.browserstack.com/
+  o https://www.adobe.com/products/edge-inspect. html
+
+Perf testing:
+  o https://www.webpagetest.org/
+  o https://tools.pingdom.com/
+  o https://developers.google.com/speed/pagespeed/insights/

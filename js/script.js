@@ -36,6 +36,7 @@ DONE:
 
 var cart = []
 
+
 // Click handler function for each product's Buy button.
 function updateCart(product) {
   event.preventDefault()
@@ -53,7 +54,8 @@ function updateCart(product) {
   composeCart()
 }
 
-// compose cart contents for console
+
+// Composes cart contents for Dev console.
 function composeCartConsole() {
   // Show count of items in cart:
   console.log("")
@@ -78,8 +80,9 @@ function composeCartConsole() {
   // show cart count next to cart icon
   document.getElementById("cartQty").textContent = cart.length
 }
-  
-// compose cart contents for webpage
+
+
+// Composes cart contents for webpage.
 function composeCart() {
   var cartContent = document.getElementById("cartInfo")  
   cartContent.innerHTML = ''
@@ -119,10 +122,12 @@ function composeCart() {
                  '<td>Total</td>'
 }
 
+
 // show/hide cart, initially hidden/empty
 var isCartVisible = false
 document.getElementById("cartInfo").style.display = 'none'
 
+// Shows or hides the shopping cart contents.
 function showHideCart() {
   var div = document.getElementById("cartInfo")
   if (isCartVisible){
@@ -134,7 +139,8 @@ function showHideCart() {
   }  
 }
 
-// Check whether cart contains product
+
+// Checks whether the shopping cart contains the specified product.
 function containsObject(obj) {
   for (var i = 0; i < cart.length; i++) {
     if (cart[i].name == obj.name) {
@@ -144,6 +150,8 @@ function containsObject(obj) {
   return -1;
 }
 
+
+// Calculates the total cost of the items in the shopping cart.
 function totalCost(){
     var total = 0
     for (var i = 0; i < cart.length; i++) {
@@ -154,7 +162,8 @@ function totalCost(){
     return total;
 }
 
-// form handler function to be triggered on submission of the email signup form
+
+// Form handler function, triggered on submission of the email signup form: shows user a message about email.
 function processEmail() {
 
   // stop form submit unless Firefox
@@ -168,6 +177,7 @@ function processEmail() {
 }; 
 
 
+// Not done:
 // As an extra challenge, you can build the product listings
 // by looping over this array and creating HTML for each element.
 // This will be best accomplished after we do lesson 09.
