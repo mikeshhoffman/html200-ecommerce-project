@@ -72,20 +72,20 @@ Each weekly assignment will be graded independently. There will not be a final g
 ## User research
 
 The site's current audience is estimated to be:
-o  Daily commuter bicyclists
-o  Women
-o  Skiers
+*  Daily commuter bicyclists
+*  Women
+*  Skiers
 
 The site's desired audience is:
-o  Bus commuters
-o  General audience
+*  Bus commuters
+*  General audience
 
 The devices and OSs that the website audience is likely to use:
-o  iPhone 6 Plus, iOS, on medium-fast cell tower networks
-o  Chrome on MacBook Pro on WiFi
+*  iPhone 6 Plus, iOS, on medium-fast cell tower networks
+*  Chrome on MacBook Pro on WiFi
 
 The above research was guided by:
-http://www.websitecriteria.com/website_writing_guide_before_you_begin_to_write/identify_the_intended_audience.html
+<http://www.websitecriteria.com/website_writing_guide_before_you_begin_to_write/identify_the_intended_audience.html>
 
 The above research is used below to prioritize the kinds of devices and contexts that were tested.
 
