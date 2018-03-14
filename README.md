@@ -71,23 +71,61 @@ Each weekly assignment will be graded independently. There will not be a final g
 
 ## User research
 
-The site's current audience is estimated to be:
-*  Daily commuter bicyclists
-*  Women
-*  Skiers
-
-The site's desired audience is:
-*  Bus commuters
-*  General audience
-
-The devices and OSs that the website audience is likely to use:
-*  iPhone 6 Plus, iOS, on medium-fast cell tower networks
-*  Chrome on MacBook Pro on WiFi
-
-The above research was guided by:
+The following research was guided by: 
 <http://www.websitecriteria.com/website_writing_guide_before_you_begin_to_write/identify_the_intended_audience.html>
 
-The above research is used below to prioritize the kinds of devices and contexts that were tested.
+The user research is used to prioritize the kinds of devices and contexts that are tested for performance and for responsive design.
+
+The clothing style available at this site is street wear rather than sports wear, primarily for adult women and men, mainly hats, gloves, and scarves.
+For example, general-purpose dress leather gloves that are useful, comfortable, and protective for daily transportation cycling, rather than sports-style gloves.
+
+Audience scenarios include:
+*  New York City streets in winter
+*  Bus commuters
+*  Daily commuter bicyclists; elegant transportation cycling, rather than competitive sports cycling.
+
+Audience:
+Adults wanting stylish and protective street clothing for cold weather.
+Design and testing will avoid targeting a specialized device type or a specialized, anarrowed audience.
+
+Age group:
+Adults.
+
+Lifestyle:
+Student, employee, professional, parent.
+
+Gender:
+Women and men.
+As the product line expands, the site is expected to break out a few pages highlighting men's clothing and women's clothing, though the current site design doesn't specify products as being for men or for women.
+
+Language:
+English as a first or second language.
+
+Education:
+7th grade and higher.
+
+Expectations:
+Not comprehensiveness, but rather, a focus on selected stylish inspiring items.
+
+Why users are seeking the content:
+Inspiration, pleasure of shopping; site should be an enjoyable place in itself.
+
+Importance of the content to the audience:
+Significant, to enable comfort in colder daily situations, while enjoying looking generally presentable.
+
+How they found the page: 
+Social media word-of-mouth, links from the company's social media sites.
+In a future phase, the site will be search-engine-optimized.
+
+
+Web and computer experience:
+Minimal.
+
+Devices, OSs, and places used to access the site: 
+*  Smartphone at home or around town
+*  Laptop at home or school or workplace
+*  iPhone 6 Plus, iOS, on medium-fast cell tower networks
+*  Chrome on MacBook Pro on WiFi
 
 
 ## Site testing
@@ -103,13 +141,13 @@ The site rendered as expected, in the additional testing tools.
 
 ### Tools used for testing performance
 
-*  <https://www.webpagetest.org> - Tested in Seattle via  Dulles, VA - Chrome browser: Results: Around 1.15 sec. to first view.
+*  <https://www.webpagetest.org> - Tested in Seattle via Dulles, VA - Chrome browser: Results: Around 1.15 sec. to first view.
 
 *  <https://tools.pingdom.com/> - Stockholm, Sweden: Result: Grade: B (89), load time 1.4 sec, faster than 81% of tested sites.
 
 *  <https://developers.google.com/speed/pagespeed/insights/> - Results: 
 
-Mobile optimization is rated as "Low", 59/100.  The following optimizations are recommended:
+Mobile optimization is rated as "Low", 59/100. The following optimizations are recommended:
 
    *  Compressing https://mikeshhoffman.github.io/…-project/images/northern-lights-480w.jpg could save 28.1KiB (40% reduction).
 
@@ -129,6 +167,8 @@ Desktop optimization is rated as "Medium", 74/100.
 
 
 ### Tools used for testing responsive design
+
+Known bug: On desktop, Chrome browser, narrow view, the initial rendering shows the cat logo a little too far down. Adding to the cart and showing the cart cause a redraw to fix this issue. No repro on iPhone 6 Plus.
 
 *  <http://responsivedesignchecker.com> - Results: The site rendered well, on many sizes of desktop, tablet, and phone.
 
