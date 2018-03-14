@@ -79,49 +79,49 @@ The user research is used to prioritize the kinds of devices and contexts that a
 The clothing style available at this site is street wear rather than sports wear, primarily for adult women and men, mainly hats, gloves, and scarves.
 For example, general-purpose dress leather gloves that are useful, comfortable, and protective for daily transportation cycling, rather than sports-style gloves.
 
-Audience scenarios include:
+**Audience scenarios include:**
 *  New York City streets in winter
 *  Bus commuters
 *  Daily commuter bicyclists; elegant transportation cycling, rather than competitive sports cycling.
 
-Audience:
+**Audience:**
 Adults wanting stylish and protective street clothing for cold weather.
 Design and testing will avoid targeting a specialized device type or a specialized, anarrowed audience.
 
-Age group:
+**Age group:**
 Adults.
 
-Lifestyle:
+**Lifestyle:**
 Student, employee, professional, parent.
 
-Gender:
+**Gender:**
 Women and men.
 As the product line expands, the site is expected to break out a few pages highlighting men's clothing and women's clothing, though the current site design doesn't specify products as being for men or for women.
 
-Language:
+**Language:**
 English as a first or second language.
 
-Education:
+**Education:**
 7th grade and higher.
 
-Expectations:
+**Expectations:**
 Not comprehensiveness, but rather, a focus on selected stylish inspiring items.
 
-Why users are seeking the content:
+**Why users are seeking the content:**
 Inspiration, pleasure of shopping; site should be an enjoyable place in itself.
 
-Importance of the content to the audience:
+**Importance of the content to the audience:**
 Significant, to enable comfort in colder daily situations, while enjoying looking generally presentable.
 
-How they found the page: 
+**How they found the page:**
 Social media word-of-mouth, links from the company's social media sites.
 In a future phase, the site will be search-engine-optimized.
 
 
-Web and computer experience:
+**Web and computer experience:**
 Minimal.
 
-Devices, OSs, and places used to access the site: 
+**Devices, OSs, and places used to access the site:**
 *  Smartphone at home or around town
 *  Laptop at home or school or workplace
 *  iPhone 6 Plus, iOS, on medium-fast cell tower networks
