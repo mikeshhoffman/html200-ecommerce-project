@@ -121,11 +121,11 @@ In a future phase, the site will be search-engine-optimized.
 **Web and computer experience:**
 Minimal.
 
-**Devices, OSs, and places used to access the site:**
-*  Smartphone at home or around town
-*  Laptop at home or school or workplace
-*  iPhone 6 Plus, iOS, on medium-fast cell tower networks
-*  Chrome on MacBook Pro on WiFi
+**Devices, OSs, and places used by the audience to access the site:**
+*  Smartphones at home or around town
+*  Smartphones such as iPhone 6 Plus (iOS), on medium-fast cell tower networks
+*  Laptops at home, school, or workplace
+*  Safari, Firefox, or Chrome browser on MacBook Pro on Wi-Fi
 
 
 ## Site testing
@@ -168,8 +168,6 @@ Desktop optimization is rated as "Medium", 74/100.
 
 ### Tools used for testing responsive design
 
-Known bug: On desktop, Chrome browser, narrow view, the initial rendering shows the cat logo a little too far down. Adding to the cart and showing the cart cause a redraw to fix this issue. No repro on iPhone 6 Plus.
-
 *  <http://responsivedesignchecker.com> - Results: The site rendered well, on many sizes of desktop, tablet, and phone.
 
 *  Chrome: Dev Tools: phone icon: Results: The site rendered well, on many widths and zoom levels.
@@ -179,3 +177,7 @@ Known bug: On desktop, Chrome browser, narrow view, the initial rendering shows 
 *  iPhone 6 Plus, 2 orientations
 
 *  MacBook Pro, various widths; in Chrome and Firefox browsers.
+
+Bugs found but not fixed yet:
+
+*  On desktop, Chrome browser, narrow view, the initial rendering shows the cat logo a little too far down. Adding to the cart and showing the cart cause a redraw to fix this issue. No repro on iPhone 6 Plus.
