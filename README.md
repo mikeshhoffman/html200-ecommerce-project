@@ -71,16 +71,15 @@ Each weekly assignment will be graded independently. There will not be a final g
 
 ## User research
 
-Whos the site's current audience? 
-
-What is the site's desired audience? 
-
-Expected or intended audience for Winter Wear Warehouse website:
+The site's current audience is estimated to be:
 o  Daily commuter bicyclists
 o  Women
 o  Skiers
 
-What kinds of devices do the audience use?
+The site's desired audience is:
+o  Bus commuters
+o  General audience
+
 The devices and OSs that the website audience is likely to use:
 o  iPhone 6 Plus, iOS, on medium-fast cell tower networks
 o  Chrome on MacBook Pro on WiFi
@@ -93,49 +92,50 @@ The above research is used below to prioritize the kinds of devices and contexts
 
 ## Site testing
 
-The site's responsivity and performance was tested against the above targeted devices, to ensure site quality.
+Site address: 
+<https://mikeshhoffman.github.io/html200-ecommerce-project/>
 
-The site address: 
-https://mikeshhoffman.github.io/html200-ecommerce-project/
+During development, the site's responsive design and performance was extensively tested and adjusted, on iPhone 6 Plus (both orientations) and on MacBook Pro 13" (Chrome and Firefox, multiple widths).
 
-The site was tested across multiple browsers and devices, focusing on the browsers and devices which our market research highlighted.
-
-### Tools used for testing
+After development, the site was additionally tested against the above targeted devices or environments, to ensure site quality.
+The site rendered as expected, in the additional testing tools.
 
 
-### Tools not yet used for testing
+### Tools used for testing performance
 
-Recommended at least:
-  o https://www.webpagetest.org/ -- USED
-  Tested in Seattle via  Dulles, VA - Chrome - Cable.
-  around 1.15 sec. to first view
-  
-  
-  o http://responsivedesignchecker.com/ -- USED
+*  <https://www.webpagetest.org> - Tested in Seattle via  Dulles, VA - Chrome browser: Results: Around 1.15 sec. to first view.
 
-Emulators & Virtual Machines (difference?) 
-  o Microsoft Edge Emulator
-  o Virtual Box, for running Windows on Mac 
-  o Windows Phone emulator in Edge 
-  o Google Developers article with more
+*  <https://tools.pingdom.com/> - Stockholm, Sweden: Result: Grade: B (89), load time 1.4 sec, faster than 81% of tested sites.
 
-Browser Tools
-  o http://responsivedesignchecker.com/ 
-  o Chrome Extensions
-  o Browser Dev Tools
+*  <https://developers.google.com/speed/pagespeed/insights/> - Results: 
 
-Real Devices
-  o Open Device Lab in Fremont, at Formidable Labs
-  o iPad at home, 2 orientations, split screen
-  o iPhone 6 Plus, 2 orientations
-  o MacBook Pro, various widths, Chrome, Firefox
-  o Not done: Open Device Lab in Fremont, at Formidable Labs
+Mobile optimization is rated as "Low", 59/100.  The following optimizations are recommended:
 
-Paid options:
-  o https://www.browserstack.com/
-  o https://www.adobe.com/products/edge-inspect. html
+   *  Compressing https://mikeshhoffman.github.io/…-project/images/northern-lights-480w.jpg could save 28.1KiB (40% reduction).
 
-Perf testing:
-  o https://www.webpagetest.org/
-  o https://tools.pingdom.com/
-  o https://developers.google.com/speed/pagespeed/insights/
+   *  Setting an expiry date or a maximum age in the HTTP headers for static resources instructs the browser to load previously downloaded 
+      resources from local disk rather than over the network.
+      For example, leverage browser caching for the following cacheable resources:
+      https://mikeshhoffman.github.io/…0-ecommerce-project/images/etro-420w.png (set to 10 minutes)
+
+   *  The page has 2 blocking script resources and 6 blocking CSS resources. This causes a delay in rendering the page.
+      None of the above-the-fold content on the page could be rendered without waiting for the following resources to load.
+      Try to defer or asynchronously load blocking resources, or inline the critical portions of those resources directly in the HTML.
+      Remove render-blocking JavaScript:
+      https://use.fontawesome.com/f4641e0b1d.js, 
+      https://mikeshhoffman.github.io/html200-ecommerce-project/js/script.js, etc.
+
+Desktop optimization is rated as "Medium", 74/100.  
+
+
+### Tools used for testing responsive design
+
+*  <http://responsivedesignchecker.com> - Results: The site rendered well, on many sizes of desktop, tablet, and phone.
+
+*  Chrome: Dev Tools: phone icon: Results: The site rendered well, on many widths and zoom levels.
+
+*  iPad 10", 2 orientations, including split screen
+
+*  iPhone 6 Plus, 2 orientations
+
+*  MacBook Pro, various widths; in Chrome and Firefox browsers.
